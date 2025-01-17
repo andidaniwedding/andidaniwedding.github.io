@@ -10,10 +10,8 @@ body {
     color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Fallback */
-    min-height: 100dvh; /* Dynamic viewport height */
+    min-height: 100vh;
     background-color: #ffffff;
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 /* Header Section */
@@ -63,6 +61,29 @@ body {
     height: auto;
 }
 
+/* Countdown Timer */
+.countdown {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.countdown .time {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Didot LT Pro', serif;
+    margin: 0 5px;
+}
+
+.countdown .time span {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+}
+
 /* Under Construction Message */
 .construction-message {
     margin: 15px 0;
@@ -95,7 +116,21 @@ body {
         width: 35px;
     }
 
+    .countdown {
+        flex-direction: column;
+        gap: 5px;
+    }
+
     .construction-message {
         font-size: 0.9rem;
+    }
+}
+
+/* iOS Safari specific styles */
+@supports (-webkit-touch-callout: none) {
+    @media (max-width: 768px) {
+        .main {
+            padding-bottom: 100px;  /* Add some padding for the browser UI */
+        }
     }
 }

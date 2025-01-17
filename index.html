@@ -7,7 +7,6 @@
 
     <link rel="icon" href="favicon.png" type="image/png">
 
-
     <title>Andi&Dani wedding</title>
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -21,13 +20,18 @@
     <!-- Main Content Section -->
     <main class="main">
         <div class="centerpiece">
-            <h1>ANDI</h1>
-            <div class="line-ring-line">
-                <hr class="line">
-                <img src="ring.png" alt="Wedding Rings">
-                <hr class="line">
+            <div class="row-layout">
+                <div class="names">
+                    <h1>ANDI</h1>
+                    <div class="line-ring-line">
+                        <hr class="line">
+                        <img src="ring.png" alt="Wedding Rings">
+                        <hr class="line">
+                    </div>
+                    <h1>DANI</h1>
+                </div>
+                <div id="countdown" class="countdown"></div>
             </div>
-            <h1>DANI</h1>
             <div class="construction-message">
                 Weboldal fejlesztés alatt.<br>
                 Látogass vissza később :)
@@ -43,5 +47,8 @@
     <footer class="footer">
         <img src="footer.png" alt="Wedding Footer Graphic">
     </footer>
+
+    <!-- Countdown Timer Script -->
+    <script src="countdown_timer.js"></script>
 </body>
 </html>
