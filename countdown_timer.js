@@ -1,23 +1,18 @@
 function updateCountdown() {
-    const weddingDate = new Date("2025-09-06T16:00:00"); // Adjust date and time
-    const now = new Date();
+    const weddingDate = new Date("2025-09-06T16:00:00");
+    const now = new Date(); // Added missing 'now' declaration
     const timeDiff = weddingDate - now;
-
-    if (timeDiff <= 0) {
-        document.getElementById('countdown').innerHTML = "The big day is here!";
-        return;
-    }
 
     const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
+    const t = translations[currentLanguage];
     document.getElementById('countdown').innerHTML = `
-        <div class="time">${days} <span>days</span></div>
-        <div class="time">${hours} <span>hours</span></div>
-        <div class="time">${minutes} <span>minutes</span></div>
-        <div class="time">${seconds} <span>seconds</span></div>
+        <div class="time">${days}<span>${t.countdownDays}</span></div>
+        <div class="time">${hours}<span>${t.countdownHours}</span></div>
+        <div class="time">${minutes}<span>${t.countdownMinutes}</span></div>
+        <div class="time">${seconds}<span>${t.countdownSeconds}</span></div>
     `;
 }
 

@@ -14,11 +14,36 @@ body {
     background-color: #ffffff;
 }
 
+/* Content Wrapper */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 90%;
+}
+
 /* Header Section */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+.header.scrolled {
+    transform: translateY(-50%);
+}
+
 .header img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.song-text {
+    text-align: center;
 }
 
 /* Main Section */
@@ -26,12 +51,19 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+    padding-top: 0; /* Remove the fixed padding-top */
+    background-color: #f9f9f9;
 }
 
 .centerpiece {
     text-align: center;
+    background-color: #ffffff;
+    padding-top: 33vh;
+    padding-bottom: 10vh;
+    margin: auto 0; /* This will center it vertically when it's the only element */
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 .centerpiece h1 {
@@ -41,6 +73,62 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+/* Section Styles */
+.section {
+    margin: 60px 0;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sections-container {
+    width: 100%;
+}
+
+.success-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.button-container {
+    display: flex;            /* Enable Flexbox */
+    justify-content: center;  /* Center items horizontally */
+    align-items: center;      /* Center items vertically */
+}
+
+
+.success-popup button {
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+    font-weight: 400;
+}
+
+/* Line Ring Line */
 .line-ring-line {
     display: flex;
     align-items: center;
@@ -71,6 +159,7 @@ body {
     font-size: 1.2rem;
 }
 
+
 .countdown .time {
     text-align: center;
     font-size: 1.5rem;
@@ -84,16 +173,161 @@ body {
     color: #666;
 }
 
-/* Under Construction Message */
-.construction-message {
-    margin: 15px 0;
-    font-size: 1.1rem;
-    line-height: 1.4;
+/* Forms */
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form input,
+.form select,
+.form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form button {
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form button:hover {
+    background-color: #444;
+}
+
+/* Venue */
+.venue-info,
+.venue-address {
+    text-align: justify;
+    margin: 5vh 12vw;
+}
+
+.getting-there {
+    text-align: justify;
+    margin: 5vh 12vw;
+}
+
+.map-container {
+    width: 70%;
+    height: 250px;
+    margin: 20px auto;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Gifts */
+.gifts-info {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.currency-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.currency-list span {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.currency-list span {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+.currency-list span:hover {
+    background-color: #bcbcbc; /* Background color change on hover */
+    color: #333; /* Text color change on hover */
+}
+
+
+/* Gallery */
+.carousel {
+    position: relative;
+    margin: 20px 0;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Contact */
+.contact-info {
+    text-align: center;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #666;
 }
 
 /* Footer Section */
 .footer {
-    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.footer.hidden {
+    transform: translateY(100%);
 }
 
 .footer img {
@@ -102,35 +336,59 @@ body {
     display: block;
 }
 
+.footer2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Responsive Design */
-@media (max-width: 360px) {
+@media (max-width: 768px) {
     .centerpiece h1 {
         font-size: 2.5rem;
     }
 
+    .section {
+        padding: 20px;
+    }
+
     .line {
-        width: 80px;
+        width: 60px;
     }
 
     .line-ring-line img {
         width: 35px;
     }
 
-    .countdown {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .construction-message {
-        font-size: 0.9rem;
+    .carousel-container {
+        height: 300px;
     }
 }
 
-/* iOS Safari specific styles */
-@supports (-webkit-touch-callout: none) {
-    @media (max-width: 360px) {
-        .main {
-            padding-bottom: 100px;  /* Add some padding for the browser UI */
-        }
-    }
+.language-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.language-toggle button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.language-toggle button.active {
+    opacity: 1;
+    font-weight: bold;
+    text-decoration: underline;
 }

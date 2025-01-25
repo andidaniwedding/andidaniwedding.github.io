@@ -6,49 +6,225 @@
     <meta name="description" content="Andi&Dani wedding">
 
     <link rel="icon" href="favicon.png" type="image/png">
-
     <title>Andi&Dani wedding</title>
-    <!-- Link to external CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header Section -->
     <header class="header">
-        <img src="header.png" alt="Wedding Header Graphic">
+        <img src="headertransparent.png" alt="Wedding Header Graphic">
     </header>
+
+    <div class="language-toggle">
+        <button onclick="setLanguage('hu')" class="active">HU</button>
+        <button onclick="setLanguage('en')">EN</button>
+    </div>    
 
     <!-- Main Content Section -->
     <main class="main">
-        <div class="centerpiece">
-            <div class="row-layout">
-                <div class="names">
-                    <h1>ANDI</h1>
-                    <div class="line-ring-line">
-                        <hr class="line">
-                        <img src="ring.png" alt="Wedding Rings">
-                        <hr class="line">
+        <div class="content-wrapper">
+            <div class="centerpiece">
+                <div class="row-layout">
+                    <div class="names">
+                        <h1>ANDI</h1>
+                        <div class="line-ring-line">
+                            <hr class="line">
+                            <img src="ring.png" alt="Wedding Rings">
+                            <hr class="line">
+                        </div>
+                        <h1>DANI</h1>
                     </div>
-                    <h1>DANI</h1>
+                    <h3 class="date">
+                        06. September 2025.
+                    </h3>
+                    <div id="countdown" class="countdown"></div>
                 </div>
-                <div id="countdown" class="countdown"></div>
             </div>
-            <div class="construction-message">
-                Weboldal fejlesztés alatt.<br>
-                Látogass vissza később :)
-            </div>
-            <div class="construction-message">
-                Our wedding website is under construction.<br>
-                Check back soon for updates :)
+
+            <div class="sections-container">
+
+            <!-- RSVP Section -->
+                <section id="rsvp" class="section">
+                    <div class="section-header">
+                        <div class="line-ring-line">
+                            <hr class="line">
+                            <img src="ring.png" alt="Wedding Rings">
+                            <hr class="line">
+                        </div>
+                        <h2>RSVP</h2>
+                    </div>
+                    <form id="rsvp-form" class="form">
+                        <div class="song-text">
+                            Please reply by <span style="font-weight: bolder;">1<sup>st</sup> of June</span>
+                            so we can finalize our arrangements and plan ahead to make the day enjoyable and fun for everyone!
+                        </div>
+                        <input type="text" name="names" placeholder="Your Names" required>
+                        <input type="email" name="email" placeholder="Your Email (main contact)" required>
+                        <select name="attendance" required>
+                            <option value="">Will you attend?</option>
+                            <option value="yes">Yes, I'll be there!</option>
+                            <option value="no">Sorry, I can't make it :(</option>
+                        </select>
+                        <input type="number" name="guests" placeholder="Number of guests" min="1" max="10">
+                        <textarea name="dietary" placeholder="Any dietary restrictions?"></textarea>
+                        <select name="accommodation">
+                            <option value="" disabled selected>Need help finding accommodation?</option>
+                            <option value="yes">Yes, I'll be there!</option>
+                            <option value="no">Sorry, I can't make it :(</option>
+                        </select>
+                        <button type="submit">Send RSVP</button>
+                    </form>
+                    <div id="success-popup-rsvp" class="success-popup">
+                        <p>Your request has been submitted successfully!</p>
+                        <div class="button-container">
+                            <button onclick="document.getElementById('success-popup-rsvp').style.display='none'">Close</button>
+                        </div>                        
+                    </div>                    
+                </section>
+
+                <!-- Venue Section -->
+                <section id="venue" class="section">
+                    <div class="section-header">
+                        <div class="line-ring-line">
+                            <hr class="line">
+                            <img src="ring.png" alt="Wedding Rings">
+                            <hr class="line">
+                        </div>
+                        <h2>Venue and Program</h2>
+                    </div>
+                    <div class="venue-info"><h3>Time</h3>Join us from <span style="font-weight: bolder;">4PM</span> onwards for our special day. More details coming soon!</div>
+                    <div class="venue-address"><h3>Location</h3> <a href="https://maps.app.goo.gl/Umgbhey3qXwDMCxm9" target="_blank">Budakeszi Erdészet Kisérleti telep, 2092 Budakeszi, Hungary</a></div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.2822349038784!2d18.8905541!3d47.523368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476a75be281f38b5%3A0x9fb181c254b618c2!2sDudok%20Programhouse!5e0!3m2!1sen!2shu!4v1737816138228!5m2!1sen!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="getting-there">
+                        <h3>Getting There</h3>
+                        <p>To reach the venue, you can either take a taxi (recommended) or use public transport.</p>
+                        <p><strong>By Taxi</strong><br>
+                        Taxis are the easiest and most convenient option for both arriving at and leaving the venue.</p>
+                        <p><strong>By Public Transport</strong><br>
+                        You can take <strong>bus number 795</strong> from <strong>Széll Kálmán tér</strong> to <strong>Budakeszi, Szőlőtelep</strong>. The bus runs every <strong>30 minutes</strong>, but the last bus departs at <strong>11 PM</strong>, so you’ll need a taxi for your return journey after that.</p>
+                    </div>
+                    
+                </section>
+
+                <!-- Gifts Section -->
+                <section id="gifts" class="section">
+                    <div class="section-header">
+                        <div class="line-ring-line">
+                            <hr class="line">
+                            <img src="ring.png" alt="Wedding Rings">
+                            <hr class="line">
+                        </div>
+                        <h2>Wedding Gifts</h2>
+                    </div>
+                    <p class="gifts-info">
+                        Your presence at our wedding is the greatest gift of all! However, if you wish to help us create 
+                        unforgettable honeymoon memories, we welcome contributions in any of the following currencies:
+                    </p>
+                    <div class="currency-list">
+                        <span>HUF</span>
+                        <span>EUR</span>
+                        <span>CHF</span>
+                        <span>MXN</span>
+                    </div>
+                </section>
+
+                <!-- Song Request Section -->
+                <section id="song" class="section">
+                    <div class="section-header">
+                        <div class="line-ring-line">
+                            <hr class="line">
+                            <img src="ring.png" alt="Wedding Rings">
+                            <hr class="line">
+                        </div>
+                        <h2>Request some Songs</h2>
+                    </div>
+                    <form id="song-form" class="form">
+                        <div class="song-text">
+                            Send us all the songs that remind you of some shared memories with us :) Or, just send some songs that make you hit the dance floor!
+                        </div>
+                        <input type="text" name="song" placeholder="Artist - Song Title" required>
+                        <textarea name="reason" placeholder="Why is this song special? (optional)"></textarea>
+                        <button type="submit">Send Request</button>
+                    </form>
+                    <div id="success-popup-song" class="success-popup">
+                        <p>Your request has been submitted successfully!</p>
+                        <div class="button-container">
+                            <button onclick="document.getElementById('success-popup-song').style.display='none'">Close</button>
+                        </div>                        
+                    </div>                    
+                </section>
+
+                <!-- Gallery Section -->
+                <section id="gallery" class="section">
+                    <div class="section-header">
+                        <div class="line-ring-line">
+                            <hr class="line">
+                            <img src="ring.png" alt="Wedding Rings">
+                            <hr class="line">
+                        </div>
+                        <h2>Our Gallery</h2>
+                    </div>
+                    <div class="carousel">
+                        <button class="carousel-button prev">❮</button>
+                        <div class="carousel-container">
+                            <img src="gallery/1.JPEG" alt="mink1">
+                            <img src="gallery/2.JPEG" alt="mink2">
+                            <img src="gallery/3.JPEG" alt="mink3">
+                            <img src="gallery/4.JPEG" alt="mink4">
+                            <img src="gallery/5.JPEG" alt="mink5">
+                            <img src="gallery/6.JPEG" alt="mink6">
+                        </div>
+                        <button class="carousel-button next">❯</button>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contact" class="section">
+                    <div class="section-header">
+                        <div class="line-ring-line">
+                            <hr class="line">
+                            <img src="ring.png" alt="Wedding Rings">
+                            <hr class="line">
+                        </div>
+                        <h2>Contact Us</h2>
+                    </div>
+                    <div class="contact-info">
+                        <p id="contact-text">
+                            If you have any questions, feel free to reach out to us using this email address, or your preffered platform where we usually communicate!
+                        </p>                        
+                        <p id="email" style="font-weight: bold;"></p>
+                        <script>
+                            const email = 'andidaniwedding@gmail.com';
+                            document.getElementById('email').innerHTML = `email: <a href="mailto:${email}">${email}</a>`;
+                        </script>
+                    </div>
+                </section>
             </div>
         </div>
+        <footer class="footer2">
+            <img src="footertransparent.png" alt="Wedding Footer Graphic">
+        </footer>
     </main>
 
     <!-- Footer Section -->
     <footer class="footer">
-        <img src="footer.png" alt="Wedding Footer Graphic">
+        <img src="footertransparent.png" alt="Wedding Footer Graphic">
     </footer>
 
-    <!-- Countdown Timer Script -->
+    <script src="scripts.js"></script>
+    <script src="localization.js"></script>
+    <script>
+    // Add active class to language buttons
+    document.querySelectorAll('.language-toggle button').forEach(button => {
+        button.addEventListener('click', function() {
+            document.querySelectorAll('.language-toggle button').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+    </script>
     <script src="countdown_timer.js"></script>
+
 </body>
 </html>
