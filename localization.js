@@ -6,7 +6,7 @@ const translations = {
         rsvpNames: 'Neved/Neveitek',
         rsvpEmail: 'Email (fő kapcsolattartó)',
         rsvpAttendance: 'Részt veszel?',
-        rsvpYes: 'Igen, ott leszek!',
+        rsvpYes: 'Igen, ott leszek/leszünk!',
         rsvpNo: 'Sajnos nem tudok/tudunk jönni :(',
         rsvpGuests: 'Vendégek száma',
         rsvpDietary: 'Speciális étrend',
@@ -21,14 +21,17 @@ const translations = {
         venueTitle: 'Helyszín és Program',
         venueTimeHeader: 'Időpont',
         venueLocationHeader: 'Helyszín',
-        venueTime: 'Csatlakozz hozzánk <span style="font-weight: bolder;">délután 4 órától</span>. Részletek hamarosan!',
+        venueTime: 'Érkézés <span style="font-weight: bolder;">16:30-tól</span>, a ceremónia <strong>17:00-kor kezdődik. <strong> Részletek hamarosan!',
         venueGettingThere: 'Megközelítés',
-        venueTaxi: 'Taxi (ajánlott)',
-        venuePublicTransport: 'Tömegközlekedés',
-        venuePublicTransportDetails: 'A <strong>795-ös buszt</strong> veheted a <strong>Széll Kálmán térről</strong> a <strong>Budakeszi, Szőlőtelep</strong> megállóig. A busz <strong>30 percenként</strong> jár, de az utolsó busz <strong>este 11-kor</strong> indul, ezután taxit kell majd hívnod.',
+        venueByCar: 'Autóval',
+        venueParkingDetails: 'A helyszínen bőséges parkolási lehetőség áll rendelkezésre. Ha alkoholt fogyasztasz, javasoljuk, hogy használd ezt az alkalmazást egy sofőr hívásához, aki hazavisz téged és az autódat is: <a href="https://soforhivo.hu/">https://soforhivo.hu/</a>',
+        venueByTaxi: 'Taxi (ajánlott)',
+        venueByTaxiDetails: '',
+        venueByPublicTransport: 'Tömegközlekedés',
+        venueByPublicTransportDetails: '<p>Nappal a <strong>795-ös busz</strong> közlekedik <strong>Széll Kálmán térről</strong> <strong>Budakeszi, Szőlőtelep</strong> felé. A busz <strong>30 percenként</strong> jár, azonban az utolsó járat <strong>23:00-kor</strong> indul.</p><p>Éjszaka ugyan nincs közvetlen buszjárat, de a helyszín ingyenes transzferszolgáltatást biztosít az éjszakai busz megállójához, ahonnan a <strong>922-es busz</strong> <strong>30 percenként</strong> indul Széll Kálmán tér felé.</p>',
 
         giftsTitle: 'Nászajándékok',
-        giftsText: 'Jelenléted a legnagyobb ajándék számunkra ❤️ ! Ha azonban szeretnél hozzájárulni ahhoz, hogy felejthetetlen legyen a nászutunk, az alábbi pénznemekben tudsz támogatni minket:',
+        giftsText: 'Jelenléted a legnagyobb ajándék számunkra! Ha azonban szeretnél hozzájárulni ahhoz, hogy felejthetetlen legyen a nászutunk, az alábbi pénznemekben tudsz támogatni minket:',
 
         galleryTitle: 'Galéria',
         contactTitle: 'Kapcsolat',
@@ -46,8 +49,8 @@ const translations = {
         rsvpNames: 'Your Names',
         rsvpEmail: 'Email (main contact)',
         rsvpAttendance: 'Will you attend?',
-        rsvpYes: 'Yes, I\'ll be there!',
-        rsvpNo: 'Sorry, I can\'t make it :(',
+        rsvpYes: 'Yes, We / I\'ll be there!',
+        rsvpNo: 'Sorry, We / I can\'t make it :(',
         rsvpGuests: 'Number of guests',
         rsvpDietary: 'Any dietary restrictions?',
         rsvpSend: 'Send RSVP',
@@ -61,14 +64,17 @@ const translations = {
         venueTitle: 'Venue and Program',
         venueTimeHeader: 'Time',
         venueLocationHeader: 'Location',
-        venueTime: 'Join us from <span style="font-weight: bolder;">4PM</span> onwards. More details coming soon!',
+        venueTime: 'Arrival from <span style="font-weight: bolder;">4:30 PM</span>, the ceremony starts at <strong>5:00 PM</strong>. Details coming soon!',
         venueGettingThere: 'Getting There',
-        venueTaxi: 'Taxi (recommended)',
-        venuePublicTransport: 'Public Transport',
-        venuePublicTransportDetails: 'You can take <strong>bus number 795</strong> from <strong>Széll Kálmán tér</strong> to <strong>Budakeszi, Szőlőtelep</strong>. The bus runs every <strong>30 minutes</strong>, but the last bus departs at <strong>11 PM</strong>, so you\'ll need a taxi for your return journey after that.',
+        venueByCar: 'By Car',
+        venueParkingDetails: 'The venue offers plenty of parking spaces. If you plan to drink alcohol, we recommend using this app to call a driver who can take you and your car home: <a href="https://soforhivo.hu/">https://soforhivo.hu/</a>',
+        venueByTaxi: 'Taxi',
+        venueByTaxiDetails: 'Recommended: Uber / Bolt',
+        venueByPublicTransport: 'Public Transport',
+        venueByPublicTransportDetails: '<p>During the day, you can take <strong>bus number 795</strong> from <strong>Széll Kálmán tér</strong> to <strong>Budakeszi, Szőlőtelep</strong>. The bus runs every <strong>30 minutes</strong>, but the last bus departs at <strong>11 PM.</strong></p><p>While there is no direct bus at night, the venue provides a free shuttle service to the night bus stop, where nightbus <strong>922</strong> depart for Széll Kálmán tér  <strong>every 30 minutes</strong>.</p>',
 
         giftsTitle: 'Wedding Gifts',
-        giftsText: 'Your presence at our wedding is the greatest gift of all ❤️ ! However, if you wish to help us create unforgettable honeymoon memories, we welcome contributions in any of the following currencies:',
+        giftsText: 'Your presence at our wedding is the greatest gift of all! However, if you wish to help us create unforgettable honeymoon memories, we welcome contributions in any of the following currencies:',
 
         galleryTitle: 'Our Gallery',
         contactTitle: 'Contact Us',
@@ -119,11 +125,16 @@ function updatePageContent() {
     document.querySelector('.venue-address h3').innerHTML = `${t.venueLocationHeader}`;
 
     document.querySelector('.getting-there').innerHTML = `
-        <h3>${t.venueGettingThere}</h3>
-        <p>${t.venueTaxi}</p>
-        <p><strong>${t.venuePublicTransport}</strong><br>
-        ${t.venuePublicTransportDetails}</p>
-    `;
+    <h3>${t.venueGettingThere}</h3>
+    <p><strong>${t.venueByCar}</strong><br>
+    ${t.venueParkingDetails} 
+    <p><strong>${t.venueByTaxi}</strong><br>
+    ${t.venueByTaxiDetails}</p>
+    <p><strong>${t.venueByPublicTransport}</strong><br>
+    ${t.venueByPublicTransportDetails}</p>
+
+`;
+
 
     // Update Gifts section
     document.querySelector('.gifts-info').innerHTML = t.giftsText;
