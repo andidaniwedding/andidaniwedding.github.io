@@ -260,9 +260,9 @@ body {
 
 .carousel-container {
     position: relative;
-    padding-top: 40%; /* Adjust this value to match your image's original aspect ratio (height/width * 100) */
+    padding-top: 50%; /* Adjust this value to match your image's original aspect ratio (height/width * 100) */
     overflow: hidden;
-    max-height: 550px;
+    max-height: 500px;
 }
 
 .carousel-container img {
