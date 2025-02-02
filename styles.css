@@ -109,7 +109,6 @@ body {
     margin-bottom: 10px;
 }
 
-
 .button-container {
     display: flex;            /* Enable Flexbox */
     justify-content: center;  /* Center items horizontally */
@@ -357,6 +356,30 @@ body {
 
     .line-ring-line img {
         width: 35px;
+    }
+
+    .venue-info,
+    .venue-address {
+        text-align: justify;
+        margin: 5vh 5vw;
+    }
+
+    .getting-there {
+        text-align: justify;
+        margin: 5vh 5vw;
+    }
+
+    .map-container {
+        width: 90%;
+        height: 250px;
+        margin: 20px auto;
+    }
+
+    .carousel-container {
+        position: relative;
+        padding-top: 80%; /* Adjust this value to match your image's original aspect ratio (height/width * 100) */
+        overflow: hidden;
+        max-height: 500px;
     }
 }
 
