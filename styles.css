@@ -99,6 +99,17 @@ body {
     z-index: 1000;
 }
 
+.success-message-song {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.success-message-rsvp {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
 .button-container {
     display: flex;            /* Enable Flexbox */
     justify-content: center;  /* Center items horizontally */

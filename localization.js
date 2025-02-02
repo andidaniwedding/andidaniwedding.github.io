@@ -18,6 +18,9 @@ const translations = {
         songReason: 'Miért különleges számotokra ez a dal? (opcionális)',
         songSend: 'Kérés Küldése',
 
+        successPopup: 'A kérésed sikeresen el lett küldve!',
+        closePopup: 'Bezárás',
+
         venueTitle: 'Helyszín és Program',
         venueTimeHeader: 'Időpont',
         venueLocationHeader: 'Helyszín',
@@ -60,6 +63,9 @@ const translations = {
         songRequest: 'Artist - Song Title',
         songReason: 'Why is this song special? (optional)',
         songSend: 'Send Request',
+
+        successPopup: 'Your request has been submitted successfully!',
+        closePopup: 'Close',
 
         venueTitle: 'Venue and Program',
         venueTimeHeader: 'Time',
@@ -115,9 +121,16 @@ function updatePageContent() {
 
     // Update RSVP section
     document.querySelector('#rsvp .song-text').innerHTML = t.rsvpText;
+    document.querySelector('.success-message-rsvp').innerHTML = t.successPopup;
+    document.querySelector('#success-popup-rsvp button').innerHTML = t.closePopup;
+
     
     // Update Song Request section
     document.querySelector('#song .song-text').innerHTML = t.songText;
+
+    // Update success popup
+    document.querySelector('.success-message-song').innerHTML = t.successPopup;
+    document.querySelector('#success-popup-song button').innerHTML = t.closePopup;
 
     // Update Venue section
     document.querySelector('.venue-info').innerHTML = `<h3>Time</h3>${t.venueTime}`;
