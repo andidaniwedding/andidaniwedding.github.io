@@ -31,7 +31,7 @@ const translations = {
         venueByPublicTransportDetails: '<p>Nappal a <strong>795-ös busz</strong> közlekedik <strong>Széll Kálmán térről</strong> <strong>Budakeszi, Szőlőtelep</strong> felé. A busz <strong>30 percenként</strong> jár, azonban az utolsó járat <strong>23:00-kor</strong> indul.</p><p>Éjszaka ugyan nincs közvetlen buszjárat, de a helyszín ingyenes transzferszolgáltatást biztosít az éjszakai busz megállójához, ahonnan a <strong>922-es busz</strong> <strong>30 percenként</strong> indul Széll Kálmán tér felé.</p>',
 
         giftsTitle: 'Nászajándékok',
-        giftsText: 'Jelenléted a legnagyobb ajándék számunkra! Ha azonban szeretnél hozzájárulni ahhoz, hogy felejthetetlen legyen a nászutunk, az alábbi pénznemekben tudsz támogatni minket:',
+        giftsText: 'A jelenlétetek a legnagyobb ajándék számunkra! Ha azonban szeretnétek hozzájárulni felejthetetlen nászutas élményeinkhez, egy borítékban megtehetitek.',
 
         galleryTitle: 'Galéria',
         contactTitle: 'Kapcsolat',
@@ -74,7 +74,7 @@ const translations = {
         venueByPublicTransportDetails: '<p>During the day, you can take <strong>bus number 795</strong> from <strong>Széll Kálmán tér</strong> to <strong>Budakeszi, Szőlőtelep</strong>. The bus runs every <strong>30 minutes</strong>, but the last bus departs at <strong>11 PM.</strong></p><p>While there is no direct bus at night, the venue provides a free shuttle service to the night bus stop, where nightbus <strong>922</strong> depart for Széll Kálmán tér  <strong>every 30 minutes</strong>.</p>',
 
         giftsTitle: 'Wedding Gifts',
-        giftsText: 'Your presence at our wedding is the greatest gift of all! However, if you wish to help us create unforgettable honeymoon memories, we welcome contributions in any of the following currencies:',
+        giftsText: 'Your presence at our wedding is the greatest gift of all! However, if you would like to help us create unforgettable honeymoon memories, you are welcome to contribute in an envelope.',
 
         galleryTitle: 'Our Gallery',
         contactTitle: 'Contact Us',

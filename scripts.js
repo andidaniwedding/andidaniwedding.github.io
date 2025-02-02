@@ -40,30 +40,78 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     const totalImages = images.length;
 
+    // Touch handling variables
+    let touchStartX = null;
+    let touchEndX = null;
+
     // Initial setup with transition
     images.forEach((img, index) => {
         img.style.position = 'absolute';
-        img.style.top = '50%'; // Center vertically
-        img.style.left = '50%'; // Center horizontally
-        img.style.transform = 'translate(-50%, -50%)'; // Offset to truly center
+        img.style.top = '50%';
+        img.style.left = '50%';
+        img.style.transform = 'translate(-50%, -50%)';
         img.style.width = 'auto';
         img.style.height = '100%';
         img.style.objectFit = 'cover';
         img.style.opacity = index === 0 ? '1' : '0';
         img.style.transition = 'opacity 0.5s ease';
+        // Prevent dragging of images
+        img.addEventListener('dragstart', (e) => e.preventDefault());
     });
-    
 
-    prevButton.addEventListener('click', () => {
+    function showPrevImage() {
         images[currentIndex].style.opacity = '0';
         currentIndex = (currentIndex - 1 + totalImages) % totalImages;
         images[currentIndex].style.opacity = '1';
-    });
+    }
 
-    nextButton.addEventListener('click', () => {
+    function showNextImage() {
         images[currentIndex].style.opacity = '0';
         currentIndex = (currentIndex + 1) % totalImages;
         images[currentIndex].style.opacity = '1';
+    }
+
+    // Touch event handlers
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    carousel.addEventListener('touchmove', (e) => {
+        touchEndX = e.touches[0].clientX;
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', () => {
+        if (!touchStartX || !touchEndX) return;
+
+        const difference = touchStartX - touchEndX;
+        const minSwipeDistance = 50; // Minimum swipe distance in pixels
+
+        if (Math.abs(difference) > minSwipeDistance) {
+            if (difference > 0) {
+                // Swiped left - show next image
+                showNextImage();
+            } else {
+                // Swiped right - show previous image
+                showPrevImage();
+            }
+        }
+
+        // Reset touch coordinates
+        touchStartX = null;
+        touchEndX = null;
+    });
+
+    // Click event handlers
+    prevButton.addEventListener('click', showPrevImage);
+    nextButton.addEventListener('click', showNextImage);
+
+    // Optional: Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            showPrevImage();
+        } else if (e.key === 'ArrowRight') {
+            showNextImage();
+        }
     });
 });
 

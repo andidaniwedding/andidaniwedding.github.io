@@ -1,5 +1,7 @@
 function updateCountdown() {
-    const weddingDate = new Date("2025-09-06T16:00:00");
+    const weddingDate = new Date(Date.UTC(2025, 8, 6, 16, 0, 0));  // UTC time (GMT+0)
+    weddingDate.setHours(weddingDate.getHours() - 1);  // Adjust for GMT+1
+
     const now = new Date(); // Added missing 'now' declaration
     const timeDiff = weddingDate - now;
 
