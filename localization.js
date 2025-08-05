@@ -13,7 +13,7 @@ const translations = {
         rsvpSend: 'Visszajelzés küldése',
 
         songTitle: 'Zenék',
-        songText: 'Küldjetek dalokat, amik eszünkbe juttatnak közös emlékeket, vagy amiktől táncra perdültök!',
+        songText: 'Küldjetek dalokat, amiktől táncra perdültök!',
         songRequest: 'Előadó - Dal Címe',
         songReason: 'Miért különleges számotokra ez a dal? (opcionális)',
         songSend: 'Kérés Küldése',
@@ -22,23 +22,35 @@ const translations = {
         closePopup: 'Bezárás',
 
         venueTitle: 'Helyszín és Program',
-        venueTimeHeader: 'Időpont',
+        venueTimeHeader: '',
         venueLocationHeader: 'Helyszín',
-        venueTime: 'Érkezés <span style="font-weight: bolder;">16:00-tól</span>, a ceremónia <strong>17:00-kor kezdődik. <strong> Részletek hamarosan!',
+        venueTime: `
+          <h3><strong>Érkezés:</strong> <span style="font-style: italic; font-weight: normal;">16:00</span></h3>
+          <h3><strong>Ceremónia:</strong> <span style="font-style: italic; font-weight: normal;">17:00</span></h3>
+          <h3><strong>Gratulációk, közös fotózás:</strong> <span style="font-style: italic; font-weight: normal;">17:30</span></h3>
+          <h3><strong>Vacsora:</strong> <span style="font-style: italic; font-weight: normal;">19:00</span></h3>
+          <h3><strong>Nyitótánc:</strong> <span style="font-style: italic; font-weight: normal;">21:00</span></h3>
+          <h3><strong>Torta:</strong> <span style="font-style: italic; font-weight: normal;">23:00</span></h3>
+          <h3><strong>Buli hajnalig:</strong> <span style="font-style: italic; font-weight: normal;">23:30 – 03:00 :)</span></h3>
+          <p><em></em></p>
+        `,
+
+
+
         venueGettingThere: 'Megközelítés',
         venueByCar: 'Autóval',
-        venueParkingDetails: 'A helyszínen bőséges parkolási lehetőség áll rendelkezésre. Ha alkoholt fogyasztasz, javasoljuk, hogy használd a következő alkalmazást sofőr hívásához, aki biztonságosan hazavisz téged az autóddal együtt: <a href="https://soforhivo.hu/">https://soforhivo.hu/</a>',
+        venueParkingDetails: 'A helyszínen bőséges parkolási lehetőség áll rendelkezésre. Ha alkoholt fogyasztasz, javasoljuk, hogy használd ezt az alkalmazást egy sofőr hívásához, aki hazavisz téged és az autódat is: <a href="https://soforhivo.hu/">https://soforhivo.hu/</a>',
         venueByTaxi: 'Taxi (ajánlott)',
         venueByTaxiDetails: '',
         venueByPublicTransport: 'Tömegközlekedés',
-        venueByPublicTransportDetails: '<p>Nappal a <strong>795-ös busz</strong> közlekedik <strong>Széll Kálmán térről</strong> <strong>Budakeszi, Szőlőtelep</strong> felé. A busz <strong>30 percenként</strong> jár, azonban az utolsó járat <strong>23:00-kor</strong> indul.</p><p>Éjszaka ugyan nincs közvetlen buszjárat, de a helyszín ingyenes transzferszolgáltatást biztosít az éjszakai busz megállójához, ahonnan a <strong>922-es busz</strong> <strong>30 percenként</strong> indul a Széll Kálmán térre.</p>',
+        venueByPublicTransportDetails: '<p>Nappal a <strong>795-ös busz</strong> közlekedik <strong>Széll Kálmán térről</strong> <strong>Budakeszi, Szőlőtelep</strong> felé. A busz <strong>30 percenként</strong> jár, azonban az utolsó járat <strong>23:00-kor</strong> indul.</p><p>Éjszaka ugyan nincs közvetlen buszjárat, de a helyszín ingyenes transzferszolgáltatást biztosít az éjszakai busz megállójához, ahonnan a <strong>922-es busz</strong> <strong>30 percenként</strong> indul Széll Kálmán tér felé.</p>',
 
         giftsTitle: 'Nászajándékok',
-        giftsText: 'A jelenlétetek a legnagyobb ajándék számunkra! Ha azonban szeretnétek hozzájárulni a nászutas élményeinkhez, egy borítékban megtehetitek.',
+        giftsText: 'A jelenlétetek a legnagyobb ajándék számunkra! Ha azonban szeretnétek hozzájárulni felejthetetlen nászutas élményeinkhez, egy borítékban megtehetitek.',
 
         galleryTitle: 'Galéria',
         contactTitle: 'Kapcsolat',
-        contactText: 'Ha bármilyen kérdésed van, nyugodtan keress meg minket ezen az email-címen, vagy a kedvenc platformodon, ahol beszélgetni szoktunk!',
+        contactText: 'Ha bármilyen kérdésed van, nyugodtan keress meg minket ezen az email-címen, vagy a kedvenc platformodon, ahol általában beszélgetni szoktunk!',
 
         countdownDays: 'nap',
         countdownHours: 'óra',
@@ -59,7 +71,7 @@ const translations = {
         rsvpSend: 'Send RSVP',
 
         songTitle: 'Request some Songs',
-        songText: 'Send us all the songs that remind you of some shared memories with us :) Or, just send some songs that make you hit the dance floor!',
+        songText: 'Send us songs that make you hit the dance floor!',
         songRequest: 'Artist - Song Title',
         songReason: 'Why is this song special? (optional)',
         songSend: 'Send Request',
@@ -68,9 +80,19 @@ const translations = {
         closePopup: 'Close',
 
         venueTitle: 'Venue and Program',
-        venueTimeHeader: 'Time',
+        venueTimeHeader: '',
         venueLocationHeader: 'Location',
-        venueTime: 'Arrival from <span style="font-weight: bolder;">4:00 PM</span>, the ceremony starts at <strong>5:00 PM</strong>. Details coming soon!',
+        venueTime: `
+          <h3><strong>Arrival:</strong> <span style="font-style: italic; font-weight: normal;">4:00 PM</span></h3>
+          <h3><strong>Ceremony:</strong> <span style="font-style: italic; font-weight: normal;">5:00 PM</span></h3>
+          <h3><strong>Congratulations, group photos:</strong> <span style="font-style: italic; font-weight: normal;">5:30 PM</span></h3>
+          <h3><strong>Dinner:</strong> <span style="font-style: italic; font-weight: normal;">7:00 PM</span></h3>
+          <h3><strong>First dance:</strong> <span style="font-style: italic; font-weight: normal;">9:00 PM</span></h3>
+          <h3><strong>Cake:</strong> <span style="font-style: italic; font-weight: normal;">11:00 PM</span></h3>
+          <h3><strong>Party till dawn:</strong> <span style="font-style: italic; font-weight: normal;">11:30 PM – 3:00 AM :)</span></h3>
+          <p><em></em></p>
+        `,
+
         venueGettingThere: 'Getting There',
         venueByCar: 'By Car',
         venueParkingDetails: 'The venue offers plenty of parking spaces. If you plan to drink alcohol, we recommend using this app to call a driver who can take you and your car home: <a href="https://soforhivo.hu/">https://soforhivo.hu/</a>',
@@ -133,9 +155,9 @@ function updatePageContent() {
     document.querySelector('#success-popup-song button').innerHTML = t.closePopup;
 
     // Update Venue section
-    document.querySelector('.venue-info').innerHTML = `<h3>Time</h3>${t.venueTime}`;
-    document.querySelector('.venue-info h3').innerHTML = `${t.venueTimeHeader}`;
-    document.querySelector('.venue-address h3').innerHTML = `${t.venueLocationHeader}`;
+    document.querySelector('.venue-info').innerHTML = `<h2>Time</h2>${t.venueTime}`;
+    document.querySelector('.venue-info h2').innerHTML = `${t.venueTimeHeader}`;
+    document.querySelector('.venue-address h2').innerHTML = `${t.venueLocationHeader}`;
 
     document.querySelector('.getting-there').innerHTML = `
     <h3>${t.venueGettingThere}</h3>

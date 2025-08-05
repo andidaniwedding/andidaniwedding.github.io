@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!-- IGEN vibekódolt fos az egész, de legalább szép. Mivel elolvastad ezt a részt, ezért a gratulációknál jelentkezz majd extra feladatért.
+-->
+<!-- YES, I vibe-coded this whole thing, but at least it's pretty. Since you read this part, please apply for extra tasks at the congratulations section.
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -82,6 +86,32 @@
                     </div>                    
                 </section>
 
+                                <!-- Song Request Section -->
+                <section id="song" class="section">
+                    <div class="section-header">
+                        <div class="line-ring-line">
+                            <hr class="line">
+                            <img src="ring.png" alt="Wedding Rings">
+                            <hr class="line">
+                        </div>
+                        <h2>Request some Songs</h2>
+                    </div>
+                    <form id="song-form" class="form">
+                        <div class="song-text">
+                            Send us all the songs that remind you of some shared memories with us :) Or, just send some songs that make you hit the dance floor!
+                        </div>
+                        <input type="text" name="song" placeholder="Artist - Song Title" required>
+                        <textarea name="reason" placeholder="Why is this song special? (optional)"></textarea>
+                        <button type="submit">Send Request</button>
+                    </form>
+                    <div id="success-popup-song" class="success-popup">
+                        <div class="success-message-song">Your request has been submitted successfully!</div>
+                        <div class="button-container">
+                            <button onclick="document.getElementById('success-popup-song').style.display='none'">Close</button>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Venue Section -->
                 <section id="venue" class="section">
                     <div class="section-header">
@@ -92,13 +122,13 @@
                         </div>
                         <h2>Venue and Program</h2>
                     </div>
-                    <div class="venue-info"><h3>Time</h3>Join us from <span style="font-weight: bolder;">4PM</span> onwards for our special day. More details coming soon!</div>
-                    <div class="venue-address"><h3>Location</h3> <a href="https://maps.app.goo.gl/Umgbhey3qXwDMCxm9" target="_blank">Budakeszi Erdészet Kisérleti telep, 2092 Budakeszi, Hungary</a></div>
+                    <div class="venue-info"><h2>Time</h2>Join us from <span style="font-weight: bolder;">4PM</span> onwards for our special day. More details coming soon!</div>
+                    <div class="venue-address"><h2>Location</h2> <a href="https://maps.app.goo.gl/Umgbhey3qXwDMCxm9" target="_blank">Budakeszi Erdészet Kisérleti telep, 2092 Budakeszi, Hungary</a></div>
                     <div class="map-container">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.2822349038784!2d18.8905541!3d47.523368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476a75be281f38b5%3A0x9fb181c254b618c2!2sDudok%20Programhouse!5e0!3m2!1sen!2shu!4v1737816138228!5m2!1sen!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="getting-there">
-                        <h3>Getting There</h3>
+                        <h2>Getting There</h2>
                         <p><strong>By Car</strong><br>
                         <p>The venue offers plenty of parking spaces. If you plan to drink alcohol, we recommend using this app to call a driver who can take you and your car home: <a href="https://soforhivo.hu/">https://soforhivo.hu/</a></p>
                         <p><strong>By Taxi</strong><br>
@@ -124,32 +154,6 @@
                         Your presence at our wedding is the greatest gift of all!
                         However, if you would like to help us create unforgettable honeymoon memories, you are welcome to contribute in an envelope.
                     </p>
-                </section>
-
-                <!-- Song Request Section -->
-                <section id="song" class="section">
-                    <div class="section-header">
-                        <div class="line-ring-line">
-                            <hr class="line">
-                            <img src="ring.png" alt="Wedding Rings">
-                            <hr class="line">
-                        </div>
-                        <h2>Request some Songs</h2>
-                    </div>
-                    <form id="song-form" class="form">
-                        <div class="song-text">
-                            Send us all the songs that remind you of some shared memories with us :) Or, just send some songs that make you hit the dance floor!
-                        </div>
-                        <input type="text" name="song" placeholder="Artist - Song Title" required>
-                        <textarea name="reason" placeholder="Why is this song special? (optional)"></textarea>
-                        <button type="submit">Send Request</button>
-                    </form>
-                    <div id="success-popup-song" class="success-popup">
-                        <div class="success-message-song">Your request has been submitted successfully!</div>
-                        <div class="button-container">
-                            <button onclick="document.getElementById('success-popup-song').style.display='none'">Close</button>
-                        </div>                        
-                    </div>                    
                 </section>
 
                 <!-- Gallery Section -->
